@@ -32,7 +32,7 @@ export const experiences = [
     period: "Last 1.5 Years",
     description:
       "Assembled, programmed, configured, and integrated IoT devices for environmental monitoring in real estate applications. Developed real-time monitoring systems using ESP32, MQTT, Wi-Fi, LoRa, and APIs — successfully integrated 27 temperature sensors for elevator monitoring, sump pit monitoring across 6 critical points for wastewater containment, and rooftop/ground water tank monitoring. Monitored system health and produced periodic operational status reports for IoT devices.",
-    tags: ["ESP32", "MQTT", "LoRa", "C++", "Python", "API"],
+    tags: ["ESP32", "MQTT", "LoRa", "C++", "Python", "API", "JavaScript"],
   },
   {
     id: 2,
