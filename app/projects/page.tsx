@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <PageIntro
         eyebrow="Portfolio"
         title="Projects & Gallery"
-        description="IoT systems I have designed, integrated, and maintained. Click any card to view the details."
+        description="This is my IoT monitoring dashboard, which has been successfully integrated into the system, deployed, and is now running as intended."
       />
       <Projects />
     </>
