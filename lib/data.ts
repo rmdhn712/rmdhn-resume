@@ -83,6 +83,14 @@ export const skillCategories = [
 // on the card and in the modal.
 export const projects = [
   {
+    id: 0,
+    title: "Dashboard System Monitoring",
+    description: 
+      "This dashboard and My daily Reports",
+    images: ["./Dashboard.png"],
+    link:"",
+    repo: "https://github.com/rmdhn712",
+      
     id: 1,
     title: "Elevator Temperature Monitoring System",
     description:
