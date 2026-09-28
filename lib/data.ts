@@ -87,7 +87,7 @@ export const projects = [
     title: "Dashboard System Monitoring",
     description: 
       "This dashboard and My daily Reports",
-    images: ["./Dashboard.png"],
+    images: ["/Dashboard.png"],
     link:"",
     repo: "https://github.com/rmdhn712",
       
