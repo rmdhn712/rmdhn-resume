@@ -40,7 +40,7 @@ export const experiences = [
     company: "IoT Engineer & IT Helpdesk",
     period: "Last 1.5 Years",
     description:
-      "Configured IP addresses and established local network setups. Installed and configured LAN networks to ensure optimal connectivity. Executed hardware and software troubleshooting responsively.",
+      "Configured IP addresses and established local network setups. Installed and configured LAN networks to ensure optimal connectivity. Executed hardware and software troubleshooting responsively. Perform monitoring using Grafana. Perform quality checks on the console device, covering everything from the hardware to the applications. Provide tenants with guidance on how to use the company's console and apps. Providing assistance with IT-related issues. Collaborate with developers on app-related issues",
     tags: ["Networking", "LAN", "IP Config", "Troubleshooting"],
   },
 ];
