@@ -49,13 +49,13 @@ export const skillCategories = [
   {
     category: "IoT & Embedded",
     skills: [
-      { name: "ESP32 / ESP-IDF", level: 72 },
+      { name: "ESP32 / ESP-IDF", level: 70 },
       { name: "Arduino IDE", level: 80 },
-      { name: "C++", level: 79 },
-      { name: "Python", level: 75 },
+      { name: "C++", level: 60 },
+      { name: "Python", level: 65 },
       { name: "MQTT & LoRa", level: 80 },
       { name: "APIs", level: 70 },
-      { name: "JavaScript", level : 67 },
+      { name: "JavaScript", level : 55 },
     ],
   },
   {
