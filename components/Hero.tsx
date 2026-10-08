@@ -48,8 +48,6 @@ export default function Hero() {
               download
               className="focus-ring inline-flex items-center gap-2 border border-black/15 dark:border-white/20 px-6 py-3 rounded-full font-medium hover:border-accent hover:text-accent transition-colors"
             >
-              <Download size={16} aria-hidden="true" />
-              Download CV
             </a>
           </div>
         </motion.div>
