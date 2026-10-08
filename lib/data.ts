@@ -7,6 +7,7 @@ export const profile = {
   email: "ramadhanakmalludin@gmail.com",
   phone: "+62 857-7328-7284",
   photo: "/profile-photo.jpg",
+   resumeFile: "/cv.pdf",
   socials: [
     { name: "GitHub", url: "https://github.com/rmdhn712", icon: "github" },
   ],
