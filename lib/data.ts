@@ -99,7 +99,7 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   {
-    src: "/Dashboard.png",
+    src: "/gallery/Dashboard.png",
     title: "IoT Monitoring Dashboard",
     description:
       "Unified building-management dashboard bringing every IoT system into one real-time view, with Normal / Warning / Critical / Disconnected counts and a daily sensor-check log.",
@@ -107,7 +107,7 @@ export const gallery: GalleryItem[] = [
     repo: "https://github.com/rmdhn712",
   },
   {
-    src: "/Temp.png",
+    src: "/gallery/Temp.png",
     title: "Elevator Temperature Monitoring System",
     description:
       "Real-time IoT system monitoring temperature across 27 elevator sensors, streaming data via ESP32 and MQTT to an operational dashboard so the technical team can respond quickly to temperature anomalies.",
@@ -115,7 +115,7 @@ export const gallery: GalleryItem[] = [
     repo: "https://github.com/rmdhn712",
   },
   {
-    src: "/Sump.png",
+    src: "/gallery/Sump.png",
     title: "Sump Pit Monitoring System (6 Critical Points)",
     description:
       "Integrated temperature and water-level sensors across 6 critical sump pit points for wastewater containment monitoring, with automatic alerts whenever thresholds are exceeded.",
@@ -123,7 +123,7 @@ export const gallery: GalleryItem[] = [
     repo: "https://github.com/rmdhn712",
   },
   {
-    src: "/Water.png",
+    src: "/gallery/Water.png",
     title: "Rooftop & Ground Water Tank Monitoring System",
     description:
       "Real-time monitoring of temperature and water level for rooftop and ground water tanks using IoT sensors, connected to an API for periodic operational status reporting.",
