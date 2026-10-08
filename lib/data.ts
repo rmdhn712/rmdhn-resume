@@ -77,17 +77,54 @@ export const skillCategories = [
   },
 ];
 
-// Note: replace the image paths and repo/link once real project photos are sent.
-// Each project has an "images" array (at least 3 photos) shown as a gallery
-// carousel inside the detail modal, plus a single "description" field used
-// on the card and in the modal.
-export const projects = [
-  {  
+// ---------------------------------------------------------------------------
+// Projects & Gallery
+//
+// HOW TO ADD IMAGES (no code needed):
+//   Drop any number of .png/.jpg/.jpeg/.webp/.gif/.avif files into the
+//   project's folder, e.g. public/projects/elevator-temperature/
+//   They are picked up automatically at build time (sorted by file name) and
+//   shown in the project card, the lightbox and the Gallery section.
+//   A file name like "01-dashboard-view.png" becomes the caption
+//   "dashboard view" (the leading number only controls the order).
+//
+// OR list them by hand in "images" below. Each entry is either a path string
+// or { src, caption }.
+// ---------------------------------------------------------------------------
+export type ProjectImage = { src: string; caption?: string };
+type ImageInput = string | ProjectImage;
+
+const toImage = (i: ImageInput): ProjectImage =>
+  typeof i === "string" ? { src: i } : i;
+
+const rawProjects: {
+  id: number;
+  title: string;
+  description: string;
+  folder: string; // folder inside /public/projects/ scanned for extra images
+  images: ImageInput[];
+  tags: string[];
+  link: string;
+  repo: string;
+}[] = [
+  {
+    id: 1,
+    title: "IoT Monitoring Dashboard",
+    description:
+      "Unified building-management dashboard that brings every IoT system together in one real-time view, with Normal / Warning / Critical / Disconnected status counts per system and a daily sensor-check log.",
+    folder: "dashboard",
+    images: [{ src: "/Dashboard.png", caption: "Dashboard overview and sensor status log" }],
+    tags: ["Dashboard", "Real-time", "Grafana"],
+    link: "",
+    repo: "https://github.com/rmdhn712",
+  },
+  {
     id: 2,
     title: "Elevator Temperature Monitoring System",
     description:
       "Real-time IoT system monitoring temperature across 27 elevator sensors, streaming data via ESP32 and MQTT to an operational dashboard so the technical team can respond quickly to temperature anomalies.",
-    images: ["/Temp.png"],
+    folder: "elevator-temperature",
+    images: [{ src: "/Temp.png", caption: "Elevator temperature monitoring" }],
     tags: ["Temperature & Humidity"],
     link: "",
     repo: "https://github.com/rmdhn712",
@@ -97,7 +134,8 @@ export const projects = [
     title: "Sump Pit Monitoring System (6 Critical Points)",
     description:
       "Integrated temperature and water-level sensors across 6 critical sump pit points for wastewater containment monitoring, with automatic alerts whenever thresholds are exceeded.",
-    images: ["/Sump.png"],
+    folder: "sump-pit",
+    images: [{ src: "/Sump.png", caption: "Sump pit water level monitoring" }],
     tags: ["Water Level Sump Pit"],
     link: "",
     repo: "https://github.com/rmdhn712",
@@ -107,9 +145,19 @@ export const projects = [
     title: "Rooftop & Ground Water Tank Monitoring System",
     description:
       "Real-time monitoring of temperature and water level for rooftop and ground water tanks using IoT sensors, connected to an API for periodic operational status reporting.",
-    images: ["/Water.png"],
+    folder: "water-tank",
+    images: [{ src: "/Water.png", caption: "Rooftop & ground water tank monitoring" }],
     tags: ["Water Level Ground & Rooftop"],
     link: "",
     repo: "https://github.com/rmdhn712",
   },
 ];
+
+export type Project = Omit<(typeof rawProjects)[number], "images"> & {
+  images: ProjectImage[];
+};
+
+export const projects: Project[] = rawProjects.map((p) => ({
+  ...p,
+  images: p.images.map(toImage),
+}));
