@@ -77,20 +77,6 @@ export const skillCategories = [
   },
 ];
 
-// ---------------------------------------------------------------------------
-// Gallery (one flat list of images, no groups)
-//
-// HOW TO ADD IMAGES (no code needed):
-//   Drop any number of .png/.jpg/.jpeg/.webp/.gif/.avif files into
-//   public/gallery/ and redeploy. They appear automatically, sorted by file
-//   name, after the entries listed below. "01-login-screen.png" becomes the
-//   title "login screen" (the leading number only controls the order).
-//
-// DESCRIPTION: put a .txt file with the same name next to the image, e.g.
-//   01-login-screen.png + 01-login-screen.txt (its text is the description).
-//
-// OR list them by hand below.
-// ---------------------------------------------------------------------------
 export type GalleryItem = {
   src: string;
   title: string;
